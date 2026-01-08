@@ -1,0 +1,11 @@
+<div class="max-w-full m-8 justify-center flex">
+  @if (query() != '') {
+    <ul>
+      @for (r of filteredResults(); track r) {
+        <li class="text-center mb-2">{{r}}</li>
+      } @empty {
+        <span>There are no results</span>
+      }
+    </ul>
+  }
+</div>
